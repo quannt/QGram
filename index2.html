@@ -9,13 +9,25 @@
     <meta name="keywords" content="instagram" />
     <meta name="author" content="QGram" />
     <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" type="text/css" href="css/default.css" />
-    <link rel="stylesheet" type="text/css" href="css/component.css" />
-    <script src="js/modernizr.custom.js"></script>
+
+    <style>
+        #grid[data-columns]::before {
+            content: '2 .column.size-1of3';
+        }
+
+        /* These are the classes that are going to be applied: */
+        .column {
+            float: left;
+        }
+
+        .size-1of3 {
+            width: 50%;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <ul class="grid effect-3" id="grid">
+        <ul id="grid" data-columns>
             <li><img src="images/sample_ (1).jpg"></li>
             <li><img src="images/sample_ (2).jpg"></li>
             <li><img src="images/sample_ (3).jpg"></li>
@@ -37,20 +49,10 @@
             <li><img src="images/sample_ (19).jpg"></li>
             <li><img src="images/sample_ (20).jpg"></li>
             <li><img src="images/sample_ (21).jpg"></li>
-            <li><img src="images/sample_ (22).jpg"></li>       
+            <li><img src="images/sample_ (22).jpg"></li>
         </ul>
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="js/masonry.pkgd.min.js"></script>
-    <script src="js/imagesloaded.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/AnimOnScroll.js"></script>
-    <script>
-        new AnimOnScroll(document.getElementById('grid'), {
-            minDuration: 0.4,
-            maxDuration: 0.7,
-            viewportFactor: 0.2
-        });
-    </script>
+    <script src="js/salvattore.min.js"></script>
 </body>
 </html>
